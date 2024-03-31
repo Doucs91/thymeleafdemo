@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http=://www.thymeleaf.org">
 <header>
-	<title>Thymeleaf Demo</title>
+	<title>Hello world - Input Form</title>
 </header>
 
 <body>
-	<form action="@{/processForm}" method="GET">
+	<form th:action="@{/processForm}" method="get">
 		<input type="text" name="studentName" placeholder="What's your name?" />
-		<input type="submit" value="Submit" />
+		<input type="submit"/>
 	</form>
 </body>
 
