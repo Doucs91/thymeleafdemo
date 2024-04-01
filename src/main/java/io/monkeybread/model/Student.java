@@ -3,7 +3,16 @@ package io.monkeybread.model;
 public class Student {
 	private String firstName;
 	private String lastName;
+	private String country;
 	
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
 	public Student() {
 	}
 	
@@ -22,7 +31,7 @@ public class Student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return firstName+ " "+ lastName;
+		return firstName+ " "+ lastName+ " from "+ country;
 	}
 
 }
