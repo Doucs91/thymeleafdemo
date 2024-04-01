@@ -15,15 +15,18 @@ import io.monkeybread.model.Student;
 public class StudentController {
 	@Value("${countries}")
 	private List<String> countries;
-	
+	@Value("${languages}")
+	private List<String> languages;
+
 	@GetMapping("/showStudentForm")
 	public String showForm(Model model) {
 		Student student = new Student();
 		model.addAttribute("student", student);
 		model.addAttribute("countries", countries);
+		model.addAttribute("languages", languages);
 		return "student-form";
 	}
-	
+
 	@PostMapping("/processStudentForm")
 	public String processStudentForm(@ModelAttribute("student") Student student) {
 		System.out.println(student);
